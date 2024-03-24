@@ -1,0 +1,2 @@
+My fix in 1.txt
+>>>>>>> branch_2
