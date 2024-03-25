@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Поиск</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        main {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+
+<div class="wrapper">
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">ИмперияЭвентов</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Главная</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Поиск <span class="sr-only">(текущая)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="login.html">Вход / Регистрация</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    </header>
+
+    <main>
+      <div class="container text-center">
+        <h1>Поиск</h1>
+        <form id="searchForm">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" id="searchInput" placeholder="Введите запрос для поиска">
+                <div class="input-group-append">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Фильтр
+                      </button>
+                      <div class="dropdown-menu">
+                        <div class="dropdown-item">
+                          <input type="checkbox" id="filter1Checkbox" onclick="toggleFilter('Фильтр 1')">
+                          <label for="filter1Checkbox">Фильтр 1</label>
+                        </div>
+                        <div class="dropdown-item">
+                          <input type="checkbox" id="filter2Checkbox" onclick="toggleFilter('Фильтр 2')">
+                          <label for="filter2Checkbox">Фильтр 2</label>
+                        </div>
+                        <div class="dropdown-item">
+                          <input type="checkbox" id="filter3Checkbox" onclick="toggleFilter('Фильтр 3')">
+                          <label for="filter3Checkbox">Фильтр 3</label>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Найти</button>
+        </form>
+        <div id="searchResults" class="mt-4">
+            <!-- Здесь будут отображаться результаты поиска -->
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer py-3 bg-dark text-white mt-auto">
+        <div class="container text-center">
+            <p>&copy; 2024 ИмперияЭвентов. Все права защищены.</p>
+        </div>
+    </footer>
+
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    var selectedFilters = [];
+
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var query = document.getElementById('searchInput').value.toLowerCase();
+        var searchResults = document.getElementById('searchResults');
+        searchResults.innerHTML = '<p>Результаты поиска для запроса: "' + query + '" с выбранными фильтрами: ' + selectedFilters.join(', ') + '</p>';
+    });
+
+    function toggleFilter(filter) {
+        var index = selectedFilters.indexOf(filter);
+        if (index === -1) {
+            selectedFilters.push(filter);
+        } else {
+            selectedFilters.splice(index, 1);
+        }
+    }
+</script>
+
+</body>
+</html>
