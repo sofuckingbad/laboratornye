@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Выгруженные данные</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Форма выгрузки</h1>
+        <p><a href="/">Анкета</a> | <a href="form_load">Форма выгрузки</a></p>
+        <h2>Выгруженные данные:</h2>
+        <div id="data-container"></div>
+        <button class="btn btn-primary" onclick="loadData()">Выгрузить данные</button>
+    </div>
+
+    <script>
+        function loadData() {
+            var xhr = new XMLHttpRequest();
+            xhr.open("GET", "/load_data", true);
+            xhr.onload = function() {
+                if (xhr.status === 200) {
+                    var data = JSON.parse(xhr.responseText);
+                    var container = document.getElementById("data-container");
+                    container.innerHTML = '';
+
+                    // Вставляем данные в контейнер
+                    for (var key in data) {
+                        if (data.hasOwnProperty(key)) {
+                            var p = document.createElement("p");
+                            p.textContent = key + ": " + data[key];
+                            container.appendChild(p);
+                        }
+                    }
+                } else {
+                    console.error('Error loading data: ' + xhr.status);
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</body>
+</html>

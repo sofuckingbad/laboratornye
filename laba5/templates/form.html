@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Дополнительный стиль для отступов между элементами */
+        .form-group {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-4">Анкета</h1>
+        <p><a href="/">Анкета</a> | <a href="form_load">Форма выгрузки</a></p>
+        <form action="/submit" method="post">
+
+            <div class="form-group">
+                <label for="surname">Фамилия:</label>
+                <input type="text" class="form-control" id="surname" name="surname" value="Хуснутдинов">
+            </div>
+
+            <div class="form-group">
+                <label for="name">Имя:</label>
+                <input type="text" class="form-control" id="name" name="name" value="Ильназ">
+            </div>
+
+            <div class="form-group">
+                <label for="patronymic">Отчество:</label>
+                <input type="text" class="form-control" id="patronymic" name="patronymic" value="Вакифович">
+            </div>
+
+            <div class="form-group">
+                <label for="email">E-mail:</label>
+                <input type="email" class="form-control" id="email" name="email" value="ilnaz.mmd@gmail.com">
+            </div>
+
+            <div class="form-group">
+                <label for="country">Выбор страны:</label>
+                <select class="form-control" id="country" name="country">
+                    <option value="Россия">Россия</option>
+                    <option value="Соединенные Штаты Америки">Соединенные Штаты Америки</option>
+                    <option value="Великобритания">Великобритания</option>
+                    <option value="Казахстан">Казахстан</option>
+                    <option value="Беларусь">Беларусь</option>
+                    <option value="Франция">Франция</option>
+                    <option value="Италия">Италия</option>
+                    <option value="Бельгия">Бельгия</option>
+                    <option value="Испания">Испания</option>
+                    <option value="Германия">Германия</option>
+                </select>
+            </div>
+            
+
+            <div class="form-group" id="cityFormGroup">
+                <label>Выбор города:</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="city1" name="city" value="Москва">
+                    <label class="form-check-label" for="city1">Москва</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="city2" name="city" value="Санкт-Петербург">
+                    <label class="form-check-label" for="city2">Санкт-Петербург</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="city3" name="city" value="Екатеринбург">
+                    <label class="form-check-label" for="city3">Екатеринбург</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="city4" name="city" value="Казань" checked>
+                    <label class="form-check-label" for="city4">Казань</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" id="city5" name="city" value="Новосибирск">
+                    <label class="form-check-label" for="city5">Новосибирск</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Выбор языка:</label><br>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="language1" name="languages" value="Русский" checked>
+                    <label class="form-check-label" for="language1">Русский</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="language2" name="languages" value="Английский" checked>
+                    <label class="form-check-label" for="language2">Английский</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="language3" name="languages" value="Испанский">
+                    <label class="form-check-label" for="language3">Испанский</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="language4" name="languages" value="Немецкий">
+                    <label class="form-check-label" for="language4">Немецкий</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="language5" name="languages" value="Итальянский">
+                    <label class="form-check-label" for="language5">Итальянский</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="professions">Выбор профессий:</label>
+                <select class="form-control" id="professions" name="professions" multiple>
+                    <option value="developer" selected>Разработчик</option>
+                    <option value="designer">Дизайнер</option>
+                    <option value="teacher">Учитель</option>
+                    <option value="doctor">Врач</option>
+                    <option value="engineer">Инженер</option>
+                    <option value="accountant">Бухгалтер</option>
+                    <option value="lawyer">Юрист</option>
+                    <option value="chef">Повар</option>
+                    <option value="writer">Писатель</option>
+                    <option value="musician">Музыкант</option>
+                </select>
+            </div>
+            
+
+            <div class="form-group">
+                <label for="password">Пароль:</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+
+            <div class="form-group">
+                <label for="additional-info">Дополнительная информация:</label>
+                <textarea class="form-control" id="additional-info" name="additional-info" rows="4" cols="50">Дополнительная информация</textarea>
+            </div>
+
+            <input type="hidden" name="student" value="Ваше_имя">
+
+            <button type="submit" class="btn btn-primary">Отправить</button>
+            <button type="reset" class="btn btn-secondary">Очистить</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#country').change(function(){
+                var selectedCountry = $(this).val();
+                $('#cityFormGroup').empty();
+
+                if(selectedCountry === "Россия") {
+                    $('#cityFormGroup').empty();
+                    $('#cityFormGroup').append('<label>Выбор города:</label><br>');
+                    $('#cityFormGroup').show();
+                    $('#cityFormGroup').append('<div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city1" name="city" value="Москва"><label class="form-check-label" for="city1">Москва</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city2" name="city" value="Санкт-Петербург"><label class="form-check-label" for="city2">Санкт-Петербург</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city3" name="city" value="Екатеринбург"><label class="form-check-label" for="city3">Екатеринбург</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city4" name="city" value="Казань"><label class="form-check-label" for="city4">Казань</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city5" name="city" value="Новосибирск"><label class="form-check-label" for="city5">Новосибирск</label></div>');
+                } else if(selectedCountry === "Соединенные Штаты Америки") {
+                    $('#cityFormGroup').empty();
+                    $('#cityFormGroup').append('<label>Выбор города:</label><br>');
+                    $('#cityFormGroup').show();
+                    $('#cityFormGroup').append('<div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city6" name="city" value="Нью-Йорк"><label class="form-check-label" for="city6">Нью-Йорк</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city7" name="city" value="Лос-Анджелес"><label class="form-check-label" for="city7">Лос-Анджелес</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city8" name="city" value="Чикаго"><label class="form-check-label" for="city8">Чикаго</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city9" name="city" value="Сан-Франциско"><label class="form-check-label" for="city9">Сан-Франциско</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city10" name="city" value="Майами"><label class="form-check-label" for="city10">Майами</label></div>');
+                } else if(selectedCountry === "Великобритания") {
+                    $('#cityFormGroup').empty();
+                    $('#cityFormGroup').append('<label>Выбор города:</label><br>');
+                    $('#cityFormGroup').show();
+                    $('#cityFormGroup').append('<div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city11" name="city" value="Лондон"><label class="form-check-label" for="city11">Лондон</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city12" name="city" value="Манчестер"><label class="form-check-label" for="city12">Манчестер</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city13" name="city" value="Бирмингем"><label class="form-check-label" for="city13">Бирмингем</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city14" name="city" value="Ливерпуль"><label class="form-check-label" for="city14">Ливерпуль</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city15" name="city" value="Оксфорд"><label class="form-check-label" for="city15">Оксфорд</label></div>');
+                } else if(selectedCountry === "Казахстан") {
+                    $('#cityFormGroup').empty();
+                    $('#cityFormGroup').append('<label>Выбор города:</label><br>');
+                    $('#cityFormGroup').show();
+                    $('#cityFormGroup').append('<div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city16" name="city" value="Алматы"><label class="form-check-label" for="city16">Алматы</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city17" name="city" value="Нур-Султан"><label class="form-check-label" for="city17">Нур-Султан</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city18" name="city" value="Шымкент"><label class="form-check-label" for="city18">Шымкент</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city19" name="city" value="Караганда"><label class="form-check-label" for="city19">Караганда</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city20" name="city" value="Актобе"><label class="form-check-label" for="city20">Актобе</label></div>');
+                } else if(selectedCountry === "Беларусь") {
+                    $('#cityFormGroup').empty();
+                    $('#cityFormGroup').append('<label>Выбор города:</label><br>');
+                    $('#cityFormGroup').show();
+                    $('#cityFormGroup').append('<div class="form-check form-check-inline"><input class="form-check-input form-check-input" type="radio" id="city21" name="city" value="Минск"><label class="form-check-label" for="city21">Минск</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city22" name="city" value="Гомель"><label class="form-check-label" for="city22">Гомель</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city23" name="city" value="Могилев"><label class="form-check-label" for="city23">Могилев</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city24" name="city" value="Витебск"><label class="form-check-label" for="city24">Витебск</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city25" name="city" value="Гродно"><label class="form-check-label" for="city25">Гродно</label></div>');
+                } else if(selectedCountry === "Франция") {
+                    $('#cityFormGroup').empty();
+                    $('#cityFormGroup').append('<label>Выбор города:</label><br>');
+                    $('#cityFormGroup').show();
+                    $('#cityFormGroup').append('<div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city26" name="city" value="Париж"><label class="form-check-label" for="city26">Париж</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city27" name="city" value="Марсель"><label class="form-check-label" for="city27">Марсель</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city28" name="city" value="Лион"><label class="form-check-label" for="city28">Лион</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city29" name="city" value="Тулуза"><label class="form-check-label" for="city29">Тулуза</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city30" name="city" value="Ницца"><label class="form-check-label" for="city30">Ницца</label></div>');
+                } else if(selectedCountry === "Италия") {
+                    $('#cityFormGroup').empty();
+                    $('#cityFormGroup').append('<label>Выбор города:</label><br>');
+                    $('#cityFormGroup').show();
+                    $('#cityFormGroup').append('<div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city31" name="city" value="Рим"><label class="form-check-label" for="city31">Рим</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city32" name="city" value="Милан"><label class="form-check-label" for="city32">Милан</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city33" name="city" value="Неаполь"><label class="form-check-label" for="city33">Неаполь</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city34" name="city" value="Турин"><label class="form-check-label" for="city34">Турин</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city35" name="city" value="Палермо"><label class="form-check-label" for="city35">Палермо</label></div>');
+                } else if(selectedCountry === "Бельгия") {
+                    $('#cityFormGroup').empty();
+                    $('#cityFormGroup').append('<label>Выбор города:</label><br>');
+                    $('#cityFormGroup').show();
+                    $('#cityFormGroup').append('<div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city36" name="city" value="Брюссель"><label class="form-check-label" for="city36">Брюссель</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city37" name="city" value="Антверпен"><label class="form-check-label" for="city37">Антверпен</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city38" name="city" value="Гент"><label class="form-check-label" for="city38">Гент</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city39" name="city" value="Брюгге"><label class="form-check-label" for="city39">Брюгге</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city40" name="city" value="Льеж"><label class="form-check-label" for="city40">Льеж</label></div>');
+                } else if(selectedCountry === "Испания") {
+                    $('#cityFormGroup').empty();
+                    $('#cityFormGroup').append('<label>Выбор города:</label><br>');
+                    $('#cityFormGroup').show();
+                    $('#cityFormGroup').append('<div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city41" name="city" value="Мадрид"><label class="form-check-label" for="city41">Мадрид</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city42" name="city" value="Барселона"><label class="form-check-label" for="city42">Барселона</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city43" name="city" value="Валенсия"><label class="form-check-label" for="city43">Валенсия</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city44" name="city" value="Севилья"><label class="form-check-label" for="city44">Севилья</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city45" name="city" value="Сарагоса"><label class="form-check-label" for="city45">Сарагоса</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city46" name="city" value="Малага"><label class="form-check-label" for="city46">Малага</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city47" name="city" value="Мурсия"><label class="form-check-label" for="city47">Мурсия</label></div>');
+                } else if(selectedCountry === "Германия") {
+                    $('#cityFormGroup').empty();
+                    $('#cityFormGroup').append('<label>Выбор города:</label><br>');
+                    $('#cityFormGroup').show();
+                    $('#cityFormGroup').append('<div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city48" name="city" value="Берлин"><label class="form-check-label" for="city48">Берлин</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city49" name="city" value="Гамбург"><label class="form-check-label" for="city49">Гамбург</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city50" name="city" value="Мюнхен"><label class="form-check-label" for="city50">Мюнхен</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city51" name="city" value="Кёльн"><label class="form-check-label" for="city51">Кёльн</label></div><div class="form-check form-check-inline"><input class="form-check-input" type="radio" id="city52" name="city" value="Франкфурт-на-Майне"><label class="form-check-label" for="city52">Франкфурт-на-Майне</label></div>');
+                } else {
+                    $('#cityFormGroup').hide();
+                }
+            })
+        });
+    </script>
+</body>
+</html>
