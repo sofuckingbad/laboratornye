@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Поиск в различных поисковых системах">
+    <title>Поиск в различных поисковых системах</title>
+    <!-- Подключаем Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Поиск в различных поисковых системах</h1>
+        
+        <!-- Форма для поиска на Яндексе -->
+        <form onsubmit="return submitSearch('https://yandex.ru/search/?text=', this.text.value);" class="mb-3">
+            <div class="input-group">
+                <input type="text" name="text" class="form-control" placeholder="Поиск на Яндексе">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Найти на Яндексе</button>
+                </div>
+            </div>
+        </form>
+        
+        <!-- Форма для поиска на Рамблере -->
+        <form onsubmit="return submitSearch('https://nova.rambler.ru/search?query=', this.query.value);" class="mb-3">
+            <div class="input-group">
+                <input type="text" name="query" class="form-control" placeholder="Поиск на Рамблере">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Найти на Рамблере</button>
+                </div>
+            </div>
+        </form>
+        
+        <!-- Форма для поиска на Aport.ru -->
+        <form onsubmit="return submitSearch('https://www.aport.ru/search/?q=', this.q.value);" class="mb-3">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Поиск на Aport.ru">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Найти на Aport.ru</button>
+                </div>
+            </div>
+        </form>
+        
+        <!-- Форма для поиска на Google -->
+        <form onsubmit="return submitSearch('https://www.google.com/search?q=', this.q.value);" class="mb-3">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="Поиск на Google">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Найти на Google</button>
+                </div>
+            </div>
+        </form>
+        
+        <!-- Форма для поиска на FileSearch.ru -->
+        <form onsubmit="return submitSearch('https://www.filesearch.ru/search?text=', this.text.value);" class="mb-3">
+            <div class="input-group">
+                <input type="text" name="text" class="form-control" placeholder="Поиск на FileSearch.ru">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-primary">Найти на FileSearch.ru</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <!-- Подключаем Bootstrap JS (необязательно) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        function submitSearch(baseURL, query) {
+            if (query.trim() === "") {
+                alert("Пожалуйста, введите поисковой запрос.");
+                return false; // отменяем отправку формы
+            } else {
+                openSearchWindow(baseURL + encodeURIComponent(query));
+                return false; // отменяем отправку формы
+            }
+        }
+
+        function openSearchWindow(url) {
+            window.open(url, '_blank', 'left=100,top=100,width=600,height=400,toolbar=no,menubar=no,location=no,status=yes,scrollbars=yes,resizable=yes');
+        }
+    </script>
+</body>
+</html>
