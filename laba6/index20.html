@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Задание 20</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Задание 20</h1>
+  <a>Выполнить пример, проверить работу. Разобраться, как организована работа метода attr(). Определите, значения каких еще атрибутов можно так получить.</a>
+
+  <p><a href="http://www.w3schools.com" id="w3s">W3Schools.com</a></p>
+  <button id="showHrefButton">Show href Value</button>
+
+  <h2>Ответ:</h2>
+  <p>Помимо href, вы также можете получить значения таких атрибутов, как id, class, src, title и так далее.</p>
+
+  <button onclick="redirectToPage()">Продолжить</button>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#showHrefButton").click(function () {
+        alert($("#w3s").attr("href"));
+      });
+    });
+
+    function redirectToPage() {
+      window.location.href = "individ1.html";
+    }
+  </script>
+</body>
+</html>

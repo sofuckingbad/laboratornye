@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Задание 4.</h1>
+<a>Ввыполнить пример, проанализировать отличие его от примера в задании 3.</a>
+<h2>1. Выполняем пример:</h2>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  h2 {
+    color: #333;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script> 
+$(document).ready(function () { 
+$("button").click(function () { 
+$(".test").hide(); 
+}); 
+}); 
+</script> 
+</head> 
+<body> 
+<h2 class="test">This is a heading</h2> 
+<p class="test">This is a paragraph.</p> 
+<p>This is another paragraph.</p> 
+<button>Click me</button> 
+<button onclick="redirectToPage()">Продолжить</button>
+</body>
+
+<h2>Ответ:</h2>
+<p>Отличие между кодом 3 и кодом 4 заключается в целевых элементах, которые скрываются при клике на кнопку.</p>
+<h3>Код 3 задания:</h3>
+<p>Этот код скрывает элемент с идентификатором "test" при клике на кнопку с идентификатором "but1". При этом вторая кнопка с идентификатором "but2" показывает скрытый элемент обратно при клике. </p>
+<h3> Код этого 4 задания:</h3>
+<p>Этот код скрывает все элементы с классом "test" при клике на любую кнопку на странице.</p>
+
+<script>
+function redirectToPage() {
+  window.location.href = "index5.html";
+}
+</script>
+</html>

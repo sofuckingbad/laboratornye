@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2. Используем библиотеку от Google</title>
+  <!-- Подключаем библиотеку jQuery от Google -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <!-- Добавляем стили -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+  <!-- Скрипт для скрытия абзацев -->
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $("p").hide();
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2>2. Используем библиотеку от Google</h2>
+  <p>This is a paragraph.</p>
+  <p>This is another paragraph.</p>
+  <button>Click me</button>
+</body>
+
+<button onclick="redirectToPage()">Продолжить</button>
+
+<script>
+function redirectToPage() {
+  window.location.href = "index1.2.html";
+}
+</script>
+
+</html>

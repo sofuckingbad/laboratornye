@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Задание 8.</h1>
+<a>Выполнить пример, проверить работу. Проверить как работает focus() и blur(),  а также разобраться с настройкой стилей через .css("свойство", "значение"). </a>
+<style>
+   body {
+     font-family: Arial, sans-serif;
+     margin: 20px;
+   }
+   h2 {
+     color: #333;
+   }
+   p {
+     margin-bottom: 10px;
+   }
+   button {
+     padding: 8px 16px;
+     background-color: #007bff;
+     color: #fff;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+   }
+   button:hover {
+     background-color: #0056b3;
+   }
+ </style>
+ 
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<script> 
+    $(document).ready(function () { 
+    $("input").focus(function () { 
+    $(this).css("background-color", "#cccccc"); 
+    }); 
+    $("input").blur(function () { 
+    $(this).css("background-color", "#ffffff"); 
+    }); 
+    }); 
+   </script> 
+</head> 
+<body> 
+   Name: <input type="text" name="fullname"><br> 
+   Email: <input type="text" name="email"> 
+</body>
+   
+
+<h2>Ответ:</h2>
+<p>focus() - событие происходит, когда элемент получает фокус ввода, например, когда пользователь нажимает на текстовое поле. blur() - событие происходит, когда элемент теряет фокус ввода, например, когда пользователь переходит к следующему полю ввода или кликает по другому элементу интерфейса.</p>
+
+<button onclick="redirectToPage()">Продолжить</button>
+<script>
+function redirectToPage() {
+  window.location.href = "index9.html";
+}
+</script>
+</html>

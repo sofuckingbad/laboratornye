@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Задание 15.</h1>
+<a>Выполнить пример, проверить работу. Разобраться, как организована работа  с переменной links и работа с ней в цикле. </a>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="http://jquery.com">jQuery</a></li>
+    <li><a href="http://jqueryui.com">jQuery UI</a></li>
+    <li><a href="http://blog.jquery.com">jQuery Blog</a></li>
+  </ul>
+  <button>Start query</button>
+  <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        // Проверяем, была ли нажата кнопка "Start query"
+        if ($(this).text() === "Start query") {
+          var links = $('li> a');
+          // перебор результатов
+          for (var i = 0; i < links.length; i++) {
+            alert(links[i].href);
+          }
+        }
+      });
+    });
+  </script>
+
+
+  <button onclick="redirectToPage()">Продолжить</button>
+  <script>
+    function redirectToPage() {
+      window.location.href = "index16.html";
+    }
+  </script>
+</body>
+</html>

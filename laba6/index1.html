@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Задание 1.</h1>
+<a>Выполнить пример, проверить работу метода hide ( ). Попробовать заменить библиотеку jquery-latest.js на другие две, описанные выше, сравнить результаты работы.</a>
+<h2>1. Выполняем пример:</h2>
+<!--если выбираем библиотеку от Microsoft CDN -->
+<!-- <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js"></script> -->
+<!--если выбираем библиотеку от Google -->
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script> -->
+<!--третий вариант -->
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  h2 {
+    color: #333;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+<script>
+    $(document).ready(function () {
+    $("button").click(function () {
+    $("p").hide();
+    });
+    });
+</script>
+</head>
+<body>
+<h3>This is a heading</h3>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<button>Click me</button>
+</body>
+
+<button onclick="redirectToPage()">Продолжить</button>
+
+<script>
+function redirectToPage() {
+  window.location.href = "index1.1.html";
+}
+
+</script>
+
+</html>

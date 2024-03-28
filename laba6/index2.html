@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Задание 2.</h1>
+<a>Ввыполнить пример, проанализировать отличие его от примера в задании 1.</a>
+<h2>1. Выполняем пример:</h2>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  h2 {
+    color: #333;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+$(document).ready(function () {
+$("button").click(function () {
+$("#test").hide();
+});
+});
+</script>
+</head>
+<body>
+<h2>This is a heading 2</h2>
+<p>This is a paragraph.</p>
+<p id="test">This is another paragraph.</p>
+<button>Click me</button>
+<button onclick="redirectToPage()">Продолжить</button>
+</body>
+
+<h2>Ответ:</h2>
+<p>Прошлый код скрывает все элементы p на странице при нажатии на кнопку. Этот код скрывает только элемент с идентификатором "test" при нажатии на кнопку.</p>
+
+<script>
+function redirectToPage() {
+  window.location.href = "index3.html";
+}
+</script>
+</html>

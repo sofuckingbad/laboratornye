@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Individual 3</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  p {
+    display: none; /* Начально скрываем все параграфы */
+  }
+  button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+</head>
+<body>
+<h1>Вариант 3: создать файл Individual_3.html, добавить 10 параграфов с каким-либо
+  текстом, невидимые при загрузке страницы, и кнопку. При нажатии на кнопку должно в
+  цикле срабатывать проявление четных параграфов и исчезновение нечетных со скоростью
+  2000, а затем наоборот.</h1>
+<p>Параграф 1</p>
+<p>Параграф 2</p>
+<p>Параграф 3</p>
+<p>Параграф 4</p>
+<p>Параграф 5</p>
+<p>Параграф 6</p>
+<p>Параграф 7</p>
+<p>Параграф 8</p>
+<p>Параграф 9</p>
+<p>Параграф 10</p>
+
+<button id="toggleButton">Toggle Paragraphs</button>
+<button onclick="redirectToPage()">Продолжить</button>
+
+<script>
+  var isEvenVisible = false;
+
+  document.getElementById("toggleButton").addEventListener("click", function() {
+    var paragraphs = document.querySelectorAll("p");
+    paragraphs.forEach(function(paragraph, index) {
+      if (paragraph.style.display === "block") {
+        paragraph.style.display = "none";
+      } else {
+        setTimeout(function() {
+          if (isEvenVisible && (index + 1) % 2 === 0) {
+            paragraph.style.display = "block";
+          } else if (!isEvenVisible && (index + 1) % 2 !== 0) {
+            paragraph.style.display = "block";
+          }
+        }, (index + 1) * 2000);
+      }
+    });
+    
+    isEvenVisible = !isEvenVisible;
+  });
+
+  function redirectToPage() {
+    window.location.href = "individ4.html";
+  }
+</script>
+
+</body>
+</html>

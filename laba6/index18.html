@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<h1>Задание 18.</h1>
+<a>Выполнить пример, проверить работу. Разобраться, как организована работа  метода text() и html(). </a>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  h2 {
+    color: #333;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+
+<head> 
+    <script> 
+     $(document).ready(function () { 
+     $("#btn1").click(function () { 
+     alert("Text: " + $("#test").text()); 
+     }); 
+     $("#btn2").click(function () { 
+     alert("HTML: " + $("#test").html()); 
+     }); 
+     }); 
+    </script> 
+    </head> 
+    <body> 
+    <p id="test">This is some <b>bold</b> text in a paragraph.</p> 
+    <button id="btn1">Show Text</button> 
+    <button id="btn2">Show HTML</button> 
+    </body>
+
+<button onclick="redirectToPage()">Продолжить</button>
+<script>
+function redirectToPage() {
+  window.location.href = "index19.html";
+}
+</script>
+</html>

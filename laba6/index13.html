@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Задание 13</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          margin: 20px;
+        }
+        h2 {
+          color: #333;
+        }
+        p {
+          margin-bottom: 10px;
+        }
+        button {
+          padding: 8px 16px;
+          background-color: #007bff;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+        }
+        button:hover {
+          background-color: #0056b3;
+        }
+      </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script> 
+        $(document).ready(function () { 
+            $("#flip").click(function () { 
+                $("#panel").slideDown("slow"); 
+            }); 
+        });
+    </script> 
+    <style type="text/css"> 
+        #panel, #flip { 
+            padding: 5px; 
+            text-align: center; 
+            background-color: #e5eecc; 
+            border: solid 1px #c3c3c3; 
+        } 
+        #panel { 
+            padding: 50px; 
+            display: none; 
+        } 
+    </style> 
+</head> 
+<body> 
+    <h1>Задание 13.</h1>
+    <div id="flip">Click to slide down panel</div> 
+    <div id="panel">Hello world!</div> 
+    <button onclick="redirectToPage()">Продолжить</button>
+    <script>
+        function redirectToPage() {
+            window.location.href = "index14.html";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <h1>Задание 12.</h1>
+  <a>Выполнить пример, проверить работу. Разобраться с настройками элементов  div, обратите внимание на свойство display:none, которое при загрузке странице  позволяет не отражать div. </a>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 20px; /* Добавлено пространство между кнопкой и следующим контентом */
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    .square {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 20px; /* Добавлено пространство между квадратами */
+    }
+  </style>
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script> 
+    $(document).ready(function () { 
+      $("button").click(function () { 
+        $("#div1").fadeOut(); 
+        $("#div2").fadeOut("slow"); 
+        $("#div3").fadeOut(3000); 
+      }); 
+    }); 
+  </script> 
+</head> 
+<body> 
+  <p>Demonstrate fadeOut() with different parameters.</p>
+  <button>Click to fade out boxes</button> 
+  <br><br> 
+  <div id="div1" class="square" style="background-color:red;"></div>
+  <div id="div2" class="square" style="background-color:green;"></div>
+  <div id="div3" class="square" style="background-color:blue;"></div> 
+
+  <button onclick="redirectToPage()">Продолжить</button>
+  <script>
+    function redirectToPage() {
+      window.location.href = "index13.html";
+    }
+  </script>
+</body>
+</html>

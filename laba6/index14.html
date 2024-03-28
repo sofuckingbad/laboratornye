@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-latest.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    button {
+      padding: 8px 16px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+ 
+  <style>
+    #myDiv {
+      background: #98bf21;
+      height: 100px;
+      width: 100px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  </style>
+</head>
+<body>
+
+<h1>Задание 14.</h1>
+<a>Выполнить пример, проверить работу. Разобраться с элементом div. С прочими примерами анимации можно познакомиться на   http://www.w3schools.com/jquery/jquery_animate.asp  </a>
+<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+  <div id="myDiv"></div>
+ <script>
+    $(document).ready(function () {
+      $("button").click(function () {
+        $("div").animate({ left: '250px' }, 'slow');
+      });
+    });
+  </script>
+  
+  <button>Start Animation</button>
+
+  <button onclick="redirectToPage()">Продолжить</button>
+  <script>
+    function redirectToPage() {
+      window.location.href = "index15.html";
+    }
+  </script>
+</body>
+</html>

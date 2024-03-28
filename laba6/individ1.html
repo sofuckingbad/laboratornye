@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Experiments</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  h2 {
+    color: #333;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  a {
+    display: block;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+<h1>Вариант 3: в исходный файл Experiments.html добавить в начало две кнопки: одну-для
+  скрытия элементов, другую – для отображения скрытых элементов. Настроить методы
+  click( ) кнопок, так чтобы они то скрывали, то отображали элементы с атрибутом href.</h1>
+<button id="hideButton">Скрыть элементы</button>
+<button id="showButton">Отобразить скрытые элементы</button>
+
+<h2>Примеры ссылок:</h2>
+<a href="https://www.google.com">Google</a>
+<a href="https://www.yandex.ru">Яндекс</a>
+<button onclick="redirectToPage()">Продолжить</button>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+$(document).ready(function () {
+    $("#hideButton").click(function () {
+        $("a").hide();
+    });
+
+    $("#showButton").click(function () {
+        $("a").show();
+    });
+});
+
+function redirectToPage() {
+  window.location.href = "individ2.html";
+}
+</script>
+
+</body>
+</html>

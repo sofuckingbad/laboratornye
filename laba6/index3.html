@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Задание 3.</h1>
+<a>Ввыполнить пример, проанализировать отличие его от примера в задании 2.</a>
+<h2>1. Выполняем пример:</h2>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  h2 {
+    color: #333;
+  }
+  p {
+    margin-bottom: 10px;
+  }
+  button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+$(document).ready(function () {
+$("#but1").click(function () {
+$("#test").hide();
+});
+$("#but2").click(function () {
+$("#test").show();
+});
+});
+</script>
+</head>
+<body>
+<h2>This is a heading 2</h2>
+<p>This is a paragraph.</p>
+<p id="test">This is another paragraph.</p>
+<button id="but1">Click me</button>
+<button id="but2">Click me for show</button>
+<button onclick="redirectToPage()">Продолжить</button>
+</body>
+
+<h2>Ответ:</h2>
+<h3>Код 2 задания:</h3>
+<p>Использует только одну кнопку, обработчик которой скрывает элемент с id "test". Не содержит возможности для отображения элемента снова после его скрытия. </p>
+<h3> Код этого 3 задания:</h3>
+<p>Использует две кнопки: одна для скрытия элемента с id "test", а вторая для его отображения. Предоставляет пользователю возможность скрывать и отображать элемент по запросу.</p>
+
+
+<script>
+function redirectToPage() {
+  window.location.href = "index4.html";
+}
+</script>
+</html>

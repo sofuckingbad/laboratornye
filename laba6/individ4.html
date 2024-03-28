@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Individual 4</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+  p {
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .odd {
+    position: relative;
+    left: -40px;
+  }
+</style>
+</head>
+<body>
+<h1>Вариант 3: создать файл Individual_4.html, добавить сверху кнопку, а затем 6 параграфов
+  с каким-либо текстом, один под другим. При нажатии на кнопку среди всех найденных
+  рисунков для нечетных выполнить извлечение текста и присвоение этого текста
+  соответствующему нижнему/четному параграфу и сместить нечетные элементы на 40 пт
+  влево.</h1>
+<button id="processButton">Обработать</button>
+
+<p>Параграф 1</p>
+<p>Параграф 2</p>
+<p>Параграф 3</p>
+<p>Параграф 4</p>
+<p>Параграф 5</p>
+<p>Параграф 6</p>
+
+<script>
+document.getElementById("processButton").onclick = function() {
+    var paragraphs = document.querySelectorAll("p");
+    for (var i = 0; i < paragraphs.length; i++) {
+        if ((i + 1) % 2 !== 0) {
+            var text = paragraphs[i].innerText;
+            paragraphs[i + 1].innerText = text;
+            paragraphs[i].classList.add("odd");
+        }
+    }
+};
+</script>
+
+</body>
+</html>
