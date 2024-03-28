@@ -24,7 +24,7 @@ def submit_form():
     print(f"Отправленные данные: {surname}, {name}, {patronymic}, {email}, {country}, {city}, {languages}, {professions}, {password}, {additional_info}, {student}")
 
     global submitted_data
-    submitted_data = {  # Сохраняем данные в глобальную переменную
+    submitted_data = { 
         'surname': surname,
         'name': name,
         'patronymic': patronymic,

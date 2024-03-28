@@ -6,7 +6,7 @@
     <title>Анкета</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
-        /* Дополнительный стиль для отступов между элементами */
+
         .form-group {
             margin-bottom: 20px;
         }
@@ -20,17 +20,17 @@
 
             <div class="form-group">
                 <label for="surname">Фамилия:</label>
-                <input type="text" class="form-control" id="surname" name="surname" value="Хуснутдинов">
+                <input type="text" class="form-control" id="surname" name="surname" value="Хуснутдинов" pattern="[A-Za-zА-Яа-яЁё]+" required>
             </div>
 
             <div class="form-group">
                 <label for="name">Имя:</label>
-                <input type="text" class="form-control" id="name" name="name" value="Ильназ">
+                <input type="text" class="form-control" id="name" name="name" value="Ильназ" pattern="[A-Za-zА-Яа-яЁё]+" required>
             </div>
 
             <div class="form-group">
                 <label for="patronymic">Отчество:</label>
-                <input type="text" class="form-control" id="patronymic" name="patronymic" value="Вакифович">
+                <input type="text" class="form-control" id="patronymic" name="patronymic" value="Вакифович" pattern="[A-Za-zА-Яа-яЁё]+" required>
             </div>
 
             <div class="form-group">
