@@ -1,0 +1,73 @@
+/* styles.css */
+
+/* Resetting default browser styles */
+body, ul, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Main menu styles */
+.mainmenu {
+    list-style-type: none;
+    background-color: #333;
+    overflow: hidden;
+}
+
+.mainmenu li {
+    float: left;
+}
+
+.mainmenu li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.mainmenu li a:hover {
+    background-color: #555;
+}
+
+/* Content styles */
+.content {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #a09c9c;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.clear {
+    clear: both;
+}
+
+/* Header styles */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Title styles */
+h1, h2 {
+    color: #333;
+}
+
+/* Link styles */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

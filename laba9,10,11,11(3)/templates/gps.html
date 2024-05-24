@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ИмперияЭвентов - Главная</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-left">
+            <h1><a href="/">ИмперияЭвентов</a></h1>
+        </div>
+        <nav class="header-right">
+            <ul>
+                <li><a href="add_post" id="paymentLink">Добавить в БД</a></li>
+                <li><a href="posts" id="paymentLink">Статьи в БД</a></li>
+                <li><a href="contact" id="paymentLink">Обратная связь</a></li>
+                <li><a href="about" id="aboutLink">О нас</a></li>
+                <li><a href="specials" id="specialsLink">Предложения месяца</a></li>
+                <li><a href="gps" id="GPSLink">Мы на карте</a></li>
+                <li><a href="login" id="loginLink">Вход/Регистрация</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="map-section">
+            <div id="map" style="width: 100%; height: 400px;"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p id="footerLogo">ИмперияЭвентов</p>
+            <p id="rightsText">&copy; И.В. Хуснутдинов, 2023 г.</p>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="add_post" id="paymentLink">Добавить в БД</a></li>
+                    <li><a href="posts" id="paymentLink">Статьи в БД</a></li>
+                    <li><a href="contact" id="paymentLink">Обратная связь</a></li>
+                    <li><a href="about" id="aboutLink">О нас</a></li>
+                    <li><a href="specials" id="specialsLink">Предложения месяца</a></li>
+                    <li><a href="login" id="loginLink">Вход/Регистрация</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-right">
+            <img src="/static/images/vk.png" alt="Описание изображения">
+            <img src="/static/images/telegram.png" alt="Описание изображения">
+            <img src="/static/images/whatsapp.png" alt="Описание изображения">
+        </div>
+    </footer>
+
+    <!-- Подключаем скрипт для работы с API Яндекс.Карт -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=b0fa8236-705b-4678-9bc3-e4a749012001&lang=ru_RU" type="text/javascript"></script>
+    <script>
+        // Инициализируем карту
+        ymaps.ready(init);
+
+        function init() {
+            // Создаем карту
+            var myMap = new ymaps.Map("map", {
+                center: [55.841882, 49.141870], // Координаты центра карты (Казань)
+                zoom: 17 // Масштаб карты
+            });
+
+            // Создаем метку (точку) на карте
+            var placemark = new ymaps.Placemark([55.841882, 49.141870], {}, {
+                preset: 'islands#redDotIcon' // Устанавливаем красную точку
+            });
+
+            // Добавляем метку на карту
+            myMap.geoObjects.add(placemark);
+        }
+    </script>
+</body>
+</html>
